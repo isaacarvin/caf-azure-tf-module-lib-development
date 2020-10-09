@@ -1,0 +1,31 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+      "resourceGroupName": {
+        "type":"string",
+        "metadata": {
+          "description": "Provide resource group name"
+        }
+      },
+       "resourceGroupLocation": {
+        "type":"string",
+        "metadata":{
+          "descritption": "Provide resource group location"
+        }
+      }
+    },
+    "variables": {
+    },
+    "resources": [
+      {
+        "type":"Microsoft.Resources/resourceGroups",
+        "apiVersion": "2018-07-01",
+        "location": "[parameters('resourceGroupLocation')]",
+        "name": "[parameters('resourceGroupName')]"
+       
+      }  
+    ],  
+    "outputs": {}
+  }
+  
